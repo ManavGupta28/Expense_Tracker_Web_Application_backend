@@ -10,7 +10,9 @@ const ensureAuthenticated = require("./Middlewares/Auth");
 require("dotenv").config();
 require("./Models/db");
 const PORT = process.env.PORT;
-
+app.get("/" ,(req,res)=>{
+  console.log("Hello World");
+})
 app.get("/ping", (req, res) => {
   res.send("PONG");
 });
